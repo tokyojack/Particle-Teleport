@@ -1,0 +1,4 @@
+name: TeleportEffect
+author: tokyojack
+version: 1.0
+main: me.tokyojack.bukkit.warpeffect.Core

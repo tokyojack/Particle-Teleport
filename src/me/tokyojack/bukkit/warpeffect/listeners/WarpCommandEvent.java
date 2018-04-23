@@ -16,8 +16,10 @@ public class WarpCommandEvent implements Listener{
 	public void warpCommand(PlayerCommandPreprocessEvent event) {
 		if (!event.getMessage().contains("/warp "))
 			return;
+		
 		Player player = event.getPlayer();
 
+		// Generates it instantly as OP players have no teleporting delay
 		if (player.isOp()) {
 			Helix.generate(player);
 			return;

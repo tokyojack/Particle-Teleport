@@ -12,9 +12,11 @@ public class PlayerMove implements Listener {
 
 	@EventHandler
 	public void warpMove(PlayerMoveEvent event) {
+		
+		// If the player moved from their initial block (As when a player rotates, it calls the event)
 		if (event.getTo().getBlockX() == event.getFrom().getBlockX()
-				&& event.getTo().getBlockY() == event.getFrom().getBlockY()
-				&& event.getTo().getBlockZ() == event.getFrom().getBlockZ())
+		 && event.getTo().getBlockY() == event.getFrom().getBlockY()
+  		 && event.getTo().getBlockZ() == event.getFrom().getBlockZ())
 			return;
 
 		Player player = event.getPlayer();
